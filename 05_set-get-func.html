@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+
+        var x = {
+            firstname: "siyamak",
+            lastname: "abasi",
+            age: 36,
+            color: "black",
+            language: "en",
+            marrieged : "",
+            get lang() {
+                return this.language;
+            },
+            
+            set divorce(value) {
+                this.marrieged = value.toUpperCase();
+    },
+   
+   
+
+            fullName: function () {
+                return this.firstname + " " + this.color;
+            }
+        };
+        x.divorce = "no";
+        var y = x;
+        y.age = 33;
+        document.getElementById("demo").innerHTML = "my namae is" + " " + x.firstname + " and my age is " + " " + x.age + " " + "yearsold"
+        document.getElementById("demo1").innerHTML = x["firstname"] + " is " + x["age"] + " years old.";
+        document.getElementById("demo2").innerHTML = x.fullName();
+        document.getElementById("demo3").innerHTML = x.lang;
+        document.getElementById("demo4").innerHTML = x.marrieged;
+    </script>
+
+</body>
+
+</html>

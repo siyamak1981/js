@@ -1,0 +1,16 @@
+<html>
+<body>
+<a href="#" onclick="myfunc('demo')"><center><h2>hello guys</h2></center></a><br><br>
+<p id="demo" ><marquee><h1>welecome</h1></marquee></p><br>
+<script type="text/javascript">
+
+    function myfunc(id) {
+       var x=document.getElementById(id);
+	   if(x.style.display == 'block')
+	   x.style.display = 'none';
+	   else 
+	   x.style.display = 'block';	   
+}
+</script>
+</body>
+</html> 
