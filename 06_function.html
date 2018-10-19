@@ -10,15 +10,20 @@
     <p id="demo2"></p>
     <p id="demo3"></p>
     <p id="demo4"></p>
+    <p id="demo5"></p>
+    
     <script>
 
-        // Constructor function for myfunc objects
-        function myfunc(value, index, arge, keyw) {
+        
+
+        // Constructor function for myfunc object
+        function myfunc(value, index, arge, krgw) {
             this.firstName = value;
             this.lastName = index;
             this.age = arge;
-            this.eyeColor = keyw;
-            this.nationality = "English";
+            this.eyeColor = krgw;
+            this.language = "KOREA";
+            
             this.perfix = function () {
                 return this.eyeColor + " " + this.age;
             };
@@ -27,29 +32,21 @@
                 this.lastName = name;
             };
         }
-
-        // Create a myfunc object
+        
+        myfunc.prototype.nationality = "french";
+        Object.defineProperty(myfunc, "language", { value: "NO" });
         var x = new myfunc("siyamak", "abasnezhad", 37, "black");
-
-        // Display age
-        document.getElementById("demo").innerHTML =
-            "My father is " + x.age + "." + "<br><br>" + x.nationality;
-
-
-        x.language = "spain";
-        document.getElementById("demo1").innerHTML = "he know" + " " + x.language;
-
-
+        x.changeName("arash");
         x.name = function () {
             return this.firstName + " " + this.lastName;
         }
-        document.getElementById("demo2").innerHTML = x.name() + " " + "<br><br>" + x.name;
-
-
-        document.getElementById("demo3").innerHTML = x.perfix();
-
-        x.changeName("arash");
-        document.getElementById("demo4").innerHTML = x.lastName;
+        x.language = "spain";
+        document.getElementById("demo").innerHTML = "My father is " + x.age + "." + "........." + x.nationality;
+        document.getElementById("demo1").innerHTML = myfunc.language;
+        document.getElementById("demo2").innerHTML = "he know" + " " + x.language;
+        document.getElementById("demo3").innerHTML = x.name() + " ..." +  x.name;
+        document.getElementById("demo4").innerHTML = x.perfix();
+        document.getElementById("demo5").innerHTML = x.lastName;
 
     </script>
 
