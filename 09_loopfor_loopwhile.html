@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var x = ["siyamak", "saeed", "samira", "diyana"];
+        var y = { fname: "siyamak", lname: "abasnezhad", age: 37 };
+        var z = [1, 2, 5, 6, 9, 7, 4, 11]
+        var i = 0;
+        var n;
+        var txt = "";
+        var sis = "";
+        var mnm = "";
+        for (i; i < x.length; i++) {
+            txt += x[i] + "<br>";
+        }
+
+        for (n in y) {
+            sis += y[n] + " ";
+        }
+        var i = 0;
+        while (i < z.length) {
+            mnm += z[i] + "<br>";
+            i++;
+        }
+        document.getElementById("demo").innerHTML = txt;
+        document.getElementById("demo1").innerHTML = sis;
+        document.getElementById("demo2").innerHTML = mnm;
+    </script>
+
+</body>
+</html>
