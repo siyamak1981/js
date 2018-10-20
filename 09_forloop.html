@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+var x = ["siyamak", "saeed", "samira", "diyana"];
+var y = {fname:"siyamak", lname:"abasnezhad", age:37}; 
+var i = 0;
+var n;
+var txt = "";
+var sis = "";
+
+
+
+for (i; i<x.length; i++) {
+    txt += x[i]+ "<br>";
+}
+
+for (n in y) {
+    sis += y[n] + " ";
+}
+
+document.getElementById("demo").innerHTML =  txt ;
+document.getElementById("demo1").innerHTML = sis;
+</script>
+
+</body>
+</html>
