@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var x = {
+            fullname: function (city, country) {
+                return this.firstname + " " + this.lastname + " " + city + " " +  country ;
+            }
+
+        }
+        var y = {
+            firstname: "siyamak",
+            lastname: "abasi",
+        }
+        document.getElementById("demo").innerHTML = x.fullname.apply(y, ["babol","iran"]);
+        document.getElementById("demo1").innerHTML = x.fullname.call(y);
+        document.getElementById("demo2").innerHTML = Math.max.apply(null, [1,2,5,6]);
+    </script>
+</body>
+
+</html>
