@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="diyana = setTimeout(x, 3000)">Try it</button>
+<button onclick="clearTimeout(diyana)">Stop it</button>
+<br><br>
+<button onclick="diyana2 = setInterval(u, 1000)">Try it now</button>
+<button onclick="clearInterval(diyana2)">Stop it</button>
+<p id="demo"></p>
+<script>
+function x() {
+  
+    alert("Hello");
+}
+// var diyana2 = setInterval(u ,1000);
+function u(){
+        var d = new Date();
+        document.getElementById("demo").innerHTML=d.toLocaleTimeString();
+    }
+</script>
+</body>
+</html>
