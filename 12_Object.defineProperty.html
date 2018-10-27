@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var x = {
+            firstname: "siyamak", lastname: "abasi", language: "en"
+        }
+        Object.defineProperty(x, 'language', { value: "FRENCH" })
+        document.getElementById("demo").innerHTML = x.language;
+        document.getElementById("demo1").innerHTML = Object.getOwnPropertyNames(x);
+        Object.defineProperty(x, "fullname", {
+            get: function () {
+                return this.firstname + " " + this.lastname;
+            }
+        });
+        document.getElementById("demo2").innerHTML = x.fullname;
+    </script>
+</body>
+
+</html>
